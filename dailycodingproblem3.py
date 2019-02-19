@@ -13,7 +13,6 @@ class TreeNode:
 
 
 class Encryption: 
-
   def serialize(self, root): 
     output = []
     node_queue = deque()
@@ -28,21 +27,19 @@ class Encryption:
       right_child = node.right
 
       if left_child:
-        output.append(left_child.val)
         node_queue.append(left_child)
       else: 
         output.append('#')
 
       if right_child:
-        output.append(right_child.val)
         node_queue.append(right_child)
       else: 
         output.append('#')
 
-      return ' '.join(map(str, output))
+    return ' '.join(map(str, output))
 
-
-
+  def deserialize(self, s): 
+    return 0 
 
 root = TreeNode(1)
 root.left = TreeNode(2)
