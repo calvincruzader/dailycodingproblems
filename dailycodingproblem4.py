@@ -8,13 +8,21 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 You can modify the input array in-place.
 '''
 class Solution: 
+	def find_first_missing_int(self, arr):
+		for idx, num in enumerate(arr): 
+			if 0 <= num and num <= len(arr)-1: 
+				arr[idx], arr[num-1] = arr[num-1], num # swap 
 
-  def find_first_missing_int(self, arr):
+		i = 1
+		while i <= len(arr): 
+			if arr[i-1] != i: 
+				break 
+			i += 1 
+		return i
 
 
-
-
-x = [1,2,3,4,6,7]
+x = [3,2,1,7,5,8,4]
 s = Solution() 
 print(s.find_first_missing_int(x))
+print(x)
 
