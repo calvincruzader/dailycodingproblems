@@ -53,7 +53,7 @@ myroot.right = TreeNode(0)
 myroot.right.right = TreeNode(0)
 myroot.right.left = TreeNode(1)
 myroot.right.left.left = TreeNode(1)
-myroot.right.left.right = TreeNode(1)
+myroot.right.left.right = TreeNode(1) 
 
 s = Solution() 
 
